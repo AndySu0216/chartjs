@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>line chart</title>
+    <script type="text/javascript" src="node_modules/chart.js/dist/chart.js"></script>
+  </head>
+  <body>
+    <div style="width:400">
+      <canvas id="myChart" width="300" height="300"></canvas>
+    </div>
+    <script type="text/javascript">
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          datasets: [{
+              label: 'Scatter Dataset',
+              data: [{
+                  x: -10,
+                  y: 0
+              }, {
+                  x: 0,
+                  y: 10
+              }, {
+                  x: 10,
+                  y: 5
+              }]
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    type: 'linear',
+                    position: 'bottom'
+                }]
+            },
+            // Boolean - whether or not the chart should be responsive and resize when the browser does.
+            responsive: false,
+
+            // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+            maintainAspectRatio: false,
+        }
+      });
+    </script>
+  </body>
+</html>
