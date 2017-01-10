@@ -12,6 +12,7 @@
   "author": "AndySu",
   "license": "UNLICENSED",
   "dependencies": {
-    "chart.js": "^2.4.0"
+    "chart.js": "^2.4.0",
+    "patternomaly": "^1.3.0"
   }
 }
